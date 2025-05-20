@@ -1,1 +1,1 @@
-# bored-api
+# Bored API
