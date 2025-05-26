@@ -1,0 +1,29 @@
+# Import libraries
+import requests
+import json
+
+# Create main function to connect to BoredAPI
+def main():
+    print("Welcome! Bored? We have just the activity for you.")
+    url = 'http://www.boredapi.com/api/activity/'
+    while True:
+        try:
+            retrieve_data = requests.request("GET", url)
+        except ValueError:
+            print("Error")
+        else:
+            data = retrieve_data.text
+            parse_data = json.loads(data)
+            print("Our suggested activity is to:", parse_data['activity'])
+            print("The activity type is", parse_data['type'])
+            answer = input("Please enter Y to see another suggested activity or enter any other key to exit: ")
+            lowercase_answer = answer.lower()
+            if lowercase_answer == 'y':
+                continue
+            else:
+                print("Program has ended. Thanks for visiting!")
+            break
+
+
+if __name__ == "__main__":
+    main()
