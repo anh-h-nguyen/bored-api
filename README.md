@@ -33,7 +33,7 @@ The Bored API project is designed to provide users with spontaneous activity ide
 - Error Handling: Detects failed API requests and displays appropriate messages.
 
 ## How It Works
-1. Fetching Activity Data – The script sends a request to the **Bored API** and retrieves a random activity.
+1. Fetching Activity Data – The script sends a request to the Bored API and retrieves a random activity.
 2. Parsing the API Response – The returned JSON data is processed and displayed.
 3. User Interaction – Users can request a new activity or exit the program.
 4. Main Functionality – The script runs in a loop until the user decides to stop.
